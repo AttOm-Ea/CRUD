@@ -1,6 +1,7 @@
 import cars from './cars.js';
 // ------------------------- Tables ---------------------------------
 const tableBody = document.getElementById('Table-body');
+let table = false;
 // All Cars
 function printAll(){
     tableBody.innerHTML = '';
@@ -16,6 +17,7 @@ function printAll(){
             </tr> `;
         tableBody.innerHTML += row;
     });
+    table = "all"; 
 }
 // Nissan Model 
 function printNissan(){
@@ -33,6 +35,7 @@ function printNissan(){
             </tr> `;
         tableBody.innerHTML += row;
     });
+    table = "nissan"; 
 }
 // Ford Model 
 function printFord(){
@@ -50,6 +53,7 @@ function printFord(){
             </tr> `;
         tableBody.innerHTML += row;
     });
+    table = "ford"; 
 } 
 // Chevrolet Model 
 function printChevrolet(){
@@ -67,6 +71,7 @@ function printChevrolet(){
             </tr> `;
         tableBody.innerHTML += row;
     });
+    table = "chevrolet"; 
 }
 // More Age Model 
 function printAgeMore(){
@@ -84,6 +89,7 @@ function printAgeMore(){
             </tr> `;
         tableBody.innerHTML += row;
     });
+    table = "ageM"; 
 }
 // Less Age Model 
 function printAgeLess(){
@@ -101,6 +107,7 @@ function printAgeLess(){
             </tr> `;
         tableBody.innerHTML += row;
     });
+    table = "ageL"; 
 }
 // More Price Model 
 function printPriceMore(){
@@ -118,6 +125,7 @@ function printPriceMore(){
             </tr> `;
         tableBody.innerHTML += row;
     });
+    table = "priceM"; 
 }
 // Less Price Model 
 function printPriceLess(){
@@ -135,6 +143,7 @@ function printPriceLess(){
             </tr> `;
         tableBody.innerHTML += row;
     });
+    table = "priceL";
 }
 // ------------------------------ Form ----------------------------------
 let editingCar = false;
@@ -166,7 +175,32 @@ function removeCar(id){
     // Delete Car 
     cars.splice(position, 1);
     // Print all car
-    printAll();
+    switch (table){
+        case "all":
+            printAll();
+        break;
+        case "nissan":
+            printNissan();
+        break;
+        case "ford":
+            printFord();
+        break;
+        case "chevrolet":
+            printChevrolet();
+        break;
+        case "ageM":
+            printPriceMore();
+        break;
+        case "ageL":
+            printAgeLess();
+        break;
+        case "priceM":
+            printPriceMore();
+        break;
+        case "priceL":
+            printPriceLess();
+        break;
+    }
 }
 function editCarButton(id){
     // Position on Array
