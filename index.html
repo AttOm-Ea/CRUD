@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Boostrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+    <title> CRUD </title>
+</head>
+<body>
+<!-- Nav -->
+    <ul class="nav justify-content-end">
+        <li class="nav-item">
+            <a onclick="printMail()" class="nav-link active" href="#table1"> Table </a>
+        </li>
+    </ul>
+<!-- Tabla de ejemplo -->
+<div class="main">
+    <div class="container-table">
+        <h1> All Cars </h1>
+        <div class="content-Buttoms">
+            <button onclick="printAll()" type="button" class="btn btn-outline-info"> All </button>
+            <button onclick="printNissan()" type="button" class="btn btn-outline-info"> Nissan </button>
+            <button onclick="printFord()" type="button" class="btn btn-outline-info"> Ford </button>
+            <button onclick="printChevrolet()" type="button" class="btn btn-outline-info"> Chevrolet </button>
+            <button onclick="printAgeMore()" type="button" class="btn btn-outline-info"> + Age 2000 </button>
+            <button onclick="printAgeLess()" type="button" class="btn btn-outline-info"> - Age 2000 </button>
+            <button onclick="printPriceMore()" type="button" class="btn btn-outline-info"> + $50,000 </button>
+            <button onclick="printPriceLess()" type="button" class="btn btn-outline-info"> - $50,000 </button>
+        </div>
+        <div class="Content-tabs" id="table1">
+            <table class="table table-dark">
+                <thead>
+                <tr>
+                    <th> Brand </th>
+                    <th> Model </th>
+                    <th> Color </th>
+                    <th> Age </th>
+                    <th> Price </th>
+                    <th> Edit </th>
+                    <th> Delet </th>
+                </tr>
+                </thead>
+                <tbody class="tbody" id="Table-body">
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="container-form">
+        <h1> Form </h1>
+        <form onsubmit="event.preventDefault(), submitCar()"  action="/CRUD-EdwinAlberto/cars.js">
+            <div class="form-group">
+                <label for="Brand"> Brand </label>
+                <input type="text" class="form-control" id="Brand" placeholder="Ford, Tesla, Porsche...">
+            </div>
+            <div class="form-group">
+                <label for="Model"> Model </label>
+                <input type="text" class="form-control" id="Model" placeholder="Maverick, Model 3, 911...">
+            </div>
+            <div class="form-group">
+                <label for="Color"> Color </label>
+                <input type="text" class="form-control" id="Color" placeholder="Blue, Black, White...">
+            </div>
+            <div class="form-group">
+                <label for="Age"> Age </label>
+                <input type="text" class="form-control" id="Age" placeholder="2010, 2000, 1991...">
+            </div>
+            <div class="form-group">
+                <label for="Price"> Price </label>
+                <input type="text" class="form-control" id="Price" placeholder="50000, 20000, 100000...">
+            </div>
+            <div class="container-button">
+                <button type="submit" class="btn"> Submit </button>
+            </div>
+          </form>
+    </div>
+</div>
+
+<!-- Js -->
+    <script type="module" src="./exercises.js"> </script>
+</body>
+</html>
