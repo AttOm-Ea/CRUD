@@ -30,8 +30,8 @@ function printNissan(){
                 <td> ${element.color} </td>
                 <td> ${element.age} </td>
                 <td> ${ '$' + element.price} </td>
-                <td class="button" onclick="editCarButton(${element.id})"> <span class="material-icons"> create </span> </td>
-                <td class="button" onclick="removeCar(${element.id})"> <span class="material-icons"> delete_forever </span> </td>
+                <td class="button edit" onclick="editCarButton(${element.id})"> <span class="material-icons"> create </span> </td>
+                <td class="button remo" onclick="removeCar(${element.id})"> <span class="material-icons"> delete_forever </span> </td>
             </tr> `;
         tableBody.innerHTML += row;
     });
@@ -48,8 +48,8 @@ function printFord(){
                 <td> ${element.color} </td>
                 <td> ${element.age} </td>
                 <td> ${ '$' + element.price} </td>
-                <td class="button" onclick="editCarButton(${element.id})"> <span class="material-icons"> create </span> </td>
-                <td class="button" onclick="removeCar(${element.id})"> <span class="material-icons"> delete_forever </span> </td>
+                <td class="button edit" onclick="editCarButton(${element.id})"> <span class="material-icons"> create </span> </td>
+                <td class="button remo" onclick="removeCar(${element.id})"> <span class="material-icons"> delete_forever </span> </td>
             </tr> `;
         tableBody.innerHTML += row;
     });
@@ -66,8 +66,8 @@ function printChevrolet(){
                 <td> ${element.color} </td>
                 <td> ${element.age} </td>
                 <td> ${ '$' + element.price} </td>
-                <td class="button" onclick="editCarButton(${element.id})"> <span class="material-icons"> create </span> </td>
-                <td class="button" onclick="removeCar(${element.id})"> <span class="material-icons"> delete_forever </span> </td>
+                <td class="button edit" onclick="editCarButton(${element.id})"> <span class="material-icons"> create </span> </td>
+                <td class="button remo" onclick="removeCar(${element.id})"> <span class="material-icons"> delete_forever </span> </td>
             </tr> `;
         tableBody.innerHTML += row;
     });
@@ -84,8 +84,8 @@ function printAgeMore(){
                 <td> ${element.color} </td>
                 <td> ${element.age} </td>
                 <td> ${ '$' + element.price} </td>
-                <td class="button" onclick="editCarButton(${element.id})"> <span class="material-icons"> create </span> </td>
-                <td class="button" onclick="removeCar(${element.id})"> <span class="material-icons"> delete_forever </span> </td>
+                <td class="button edit" onclick="editCarButton(${element.id})"> <span class="material-icons"> create </span> </td>
+                <td class="button remo" onclick="removeCar(${element.id})"> <span class="material-icons"> delete_forever </span> </td>
             </tr> `;
         tableBody.innerHTML += row;
     });
@@ -102,8 +102,8 @@ function printAgeLess(){
                 <td> ${element.color} </td>
                 <td> ${element.age} </td>
                 <td> ${ '$' + element.price} </td>
-                <td class="button" onclick="editCarButton(${element.id})"> <span class="material-icons"> create </span> </td>
-                <td class="button" onclick="removeCar(${element.id})"> <span class="material-icons"> delete_forever </span> </td>
+                <td class="button edit" onclick="editCarButton(${element.id})"> <span class="material-icons"> create </span> </td>
+                <td class="button remo" onclick="removeCar(${element.id})"> <span class="material-icons"> delete_forever </span> </td>
             </tr> `;
         tableBody.innerHTML += row;
     });
@@ -120,8 +120,8 @@ function printPriceMore(){
                 <td> ${element.color} </td>
                 <td> ${element.age} </td>
                 <td> ${ '$' + element.price} </td>
-                <td class="button" onclick="editCarButton(${element.id})"> <span class="material-icons"> create </span> </td>
-                <td class="button" onclick="removeCar(${element.id})"> <span class="material-icons"> delete_forever </span> </td>
+                <td class="button edit" onclick="editCarButton(${element.id})"> <span class="material-icons"> create </span> </td>
+                <td class="button remo" onclick="removeCar(${element.id})"> <span class="material-icons"> delete_forever </span> </td>
             </tr> `;
         tableBody.innerHTML += row;
     });
@@ -138,8 +138,8 @@ function printPriceLess(){
                 <td> ${element.color} </td>
                 <td> ${element.age} </td>
                 <td> ${ '$' + element.price} </td>
-                <td class="button" onclick="editCarButton(${element.id})"> <span class="material-icons"> create </span> </td>
-                <td class="button" onclick="removeCar(${element.id})"> <span class="material-icons"> delete_forever </span> </td>
+                <td class="button edit" onclick="editCarButton(${element.id})"> <span class="material-icons"> create </span> </td>
+                <td class="button remo" onclick="removeCar(${element.id})"> <span class="material-icons"> delete_forever </span> </td>
             </tr> `;
         tableBody.innerHTML += row;
     });
